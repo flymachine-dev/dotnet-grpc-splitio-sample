@@ -11,4 +11,27 @@ To demonstrate the continuous increase in active threadpool threads:
 
 Comparing the output of step 5 with step 3, specifically with regards to `process_num_threads`, `dotnet_threadpool_num_threads`, and `coreclr_process_thread_count`,  active threads reported will increase over time even when service is completely idle.  We believe this is due to the background fetching and processing of Split.io client.
 
+## Why is continuously increasing thread count bad?
+The CLR threadpool will ideally try to minimize active thread count to only what is necessary (gauged from the work queue) by reusing threads which have completed and are properly disposed.  Having too many active or busy threads will steal from CPU in order to context switch.  When active thread count is above the default configured minThreads, the CLR Threadpool will throttle the rate at which it injects new threads to one thread per 500ms, meaning bursts in traffic will cause significant delays.  See more info on this in the [Microsoft docs](https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool) and [this helpful gist](https://gist.github.com/JonCole/e65411214030f0d823cb#file-threadpool-md).
 
+
+## Example results
+At the beginning of the test run:
+```
+coreclr_process_thread_count 53
+process_num_threads 54
+dotnet_threadpool_num_threads 15
+dotnet_threadpool_queue_length_sum 0
+dotnet_threadpool_queue_length_count 5
+```
+
+After ~12 hours of service idle:
+```
+coreclr_process_thread_count 114
+process_num_threads 114
+dotnet_threadpool_num_threads 75
+dotnet_threadpool_queue_length_sum 761
+dotnet_threadpool_queue_length_count 43337
+```
+
+Number of active threads grew linearly during this time frame, when we would expect no thread count growth in the threadpool.
