@@ -27,11 +27,11 @@ dotnet_threadpool_queue_length_count 5
 
 After ~12 hours of service idle:
 ```
-coreclr_process_thread_count 114
-process_num_threads 114
-dotnet_threadpool_num_threads 75
-dotnet_threadpool_queue_length_sum 761
-dotnet_threadpool_queue_length_count 43337
+coreclr_process_thread_count 124
+process_num_threads 124
+dotnet_threadpool_num_threads 85
+dotnet_threadpool_queue_length_sum 897
+dotnet_threadpool_queue_length_count 46737
 ```
 
 Number of active threads grew linearly during this time frame, when we would expect no thread count growth in the threadpool.
