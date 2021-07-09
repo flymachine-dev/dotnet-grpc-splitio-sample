@@ -11,7 +11,7 @@
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.34.0" />
     <PackageReference Include="Grpc.HealthCheck" Version="2.35.0" />
-    <PackageReference Include="Splitio" Version="6.3.1" />
+    <PackageReference Include="Splitio" Version="6.3.2-rc339" />
     <PackageReference Include="FluentValidation" Version="9.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.2.2" />
     <PackageReference Include="Nexogen.Libraries.Metrics.Extensions" Version="3.3.2" />
