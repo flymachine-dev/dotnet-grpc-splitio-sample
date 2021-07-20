@@ -1,0 +1,173 @@
+# HELP dotnet_threadpool_timer_count The number of timers active
+# TYPE dotnet_threadpool_timer_count gauge
+dotnet_threadpool_timer_count 9
+# HELP dotnet_threadpool_throughput_total The total number of work items that have finished execution in the thread pool
+# TYPE dotnet_threadpool_throughput_total counter
+dotnet_threadpool_throughput_total 73194
+# HELP dotnet_threadpool_num_threads The number of active threads in the thread pool
+# TYPE dotnet_threadpool_num_threads gauge
+dotnet_threadpool_num_threads 12
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1625875106.994487
+# HELP dotnet_threadpool_adjustments_total The total number of changes made to the size of the thread pool, labeled by the reason for change
+# TYPE dotnet_threadpool_adjustments_total counter
+dotnet_threadpool_adjustments_total{adjustment_reason="warmup"} 4
+dotnet_threadpool_adjustments_total{adjustment_reason="climbing_move"} 358
+dotnet_threadpool_adjustments_total{adjustment_reason="thread_timed_out"} 352
+# HELP process_working_set_bytes Process working set
+# TYPE process_working_set_bytes gauge
+process_working_set_bytes 79040512
+# HELP process_private_memory_bytes Process private memory size
+# TYPE process_private_memory_bytes gauge
+process_private_memory_bytes 0
+# HELP process_open_handles Number of open handles
+# TYPE process_open_handles gauge
+process_open_handles 0
+# HELP dotnet_build_info Build information about prometheus-net.DotNetRuntime and the environment
+# TYPE dotnet_build_info gauge
+dotnet_build_info{version="1.0.0.0",target_framework=".NETCoreApp,Version=v5.0",runtime_version=".NET 5.0.6",os_version="Darwin 20.4.0 Darwin Kernel Version 20.4.0: Thu Apr 22 21:46:47 PDT 2021; root:xnu-7195.101.2~1/RELEASE_X86_64",process_architecture="X64",gc_mode="Server"} 1
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 667.4986682
+# HELP dotnet_threadpool_queue_length Measures the queue length of the thread pool. Values greater than 0 indicate a backlog of work for the threadpool to process.
+# TYPE dotnet_threadpool_queue_length histogram
+dotnet_threadpool_queue_length_sum 7
+dotnet_threadpool_queue_length_count 243969
+dotnet_threadpool_queue_length_bucket{le="0"} 243962
+dotnet_threadpool_queue_length_bucket{le="1"} 243969
+dotnet_threadpool_queue_length_bucket{le="10"} 243969
+dotnet_threadpool_queue_length_bucket{le="100"} 243969
+dotnet_threadpool_queue_length_bucket{le="1000"} 243969
+dotnet_threadpool_queue_length_bucket{le="+Inf"} 243969
+# HELP dotnet_collection_count_total GC collection count
+# TYPE dotnet_collection_count_total counter
+dotnet_collection_count_total{generation="1"} 14
+dotnet_collection_count_total{generation="0"} 132
+dotnet_collection_count_total{generation="2"} 3
+# HELP dotnet_total_memory_bytes Total known allocated memory
+# TYPE dotnet_total_memory_bytes gauge
+dotnet_total_memory_bytes 116801672
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 34693951488
+# HELP dotnet_internal_recycle_count prometheus-net.DotNetRuntime internal metric. Counts the number of times the underlying event listeners have been recycled
+# TYPE dotnet_internal_recycle_count counter
+dotnet_internal_recycle_count 2
+# HELP process_num_threads Total number of threads
+# TYPE process_num_threads gauge
+process_num_threads 67
+# HELP dotnet_gc_allocated_bytes_total The total number of bytes allocated on the managed heap
+# TYPE dotnet_gc_allocated_bytes_total counter
+dotnet_gc_allocated_bytes_total 12184056840
+# HELP dotnet_gc_collection_count_total Counts the number of garbage collections that have occurred, broken down by generation number.
+# TYPE dotnet_gc_collection_count_total counter
+dotnet_gc_collection_count_total{gc_generation="1"} 14
+dotnet_gc_collection_count_total{gc_generation="0"} 132
+dotnet_gc_collection_count_total{gc_generation="2"} 3
+# HELP dotnet_gc_pause_ratio The percentage of time the process spent paused for garbage collection
+# TYPE dotnet_gc_pause_ratio gauge
+dotnet_gc_pause_ratio 0
+# HELP dotnet_gc_memory_total_available_bytes The upper limit on the amount of physical memory .NET can allocate to
+# TYPE dotnet_gc_memory_total_available_bytes gauge
+dotnet_gc_memory_total_available_bytes 34359738368
+# HELP process_cpu_count The number of processor cores available to this process.
+# TYPE process_cpu_count gauge
+process_cpu_count 16
+# HELP dotnet_contention_total The number of locks contended
+# TYPE dotnet_contention_total counter
+dotnet_contention_total 43
+# HELP dotnet_gc_heap_size_bytes The current size of all heaps (only updated after a garbage collection)
+# TYPE dotnet_gc_heap_size_bytes gauge
+dotnet_gc_heap_size_bytes{gc_generation="1"} 2072216
+dotnet_gc_heap_size_bytes{gc_generation="0"} 10532984
+dotnet_gc_heap_size_bytes{gc_generation="loh"} 12918376
+dotnet_gc_heap_size_bytes{gc_generation="2"} 4295248
+
+
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1625878706 1626119079625
+
+# HELP coreclr_process_peak_virtual_memory_size_bytes Virtual Bytes Peak
+# TYPE coreclr_process_peak_virtual_memory_size_bytes gauge
+coreclr_process_peak_virtual_memory_size_bytes 0 1626119079625
+
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 667.5137988 1626119079625
+
+# HELP coreclr_gc_collection_count The number of times a collection has occured in the given generation
+# TYPE coreclr_gc_collection_count gauge
+coreclr_gc_collection_count{generation="gen1"} 14 1626119079625
+coreclr_gc_collection_count{generation="gen2"} 3 1626119079625
+coreclr_gc_collection_count{generation="gen0"} 132 1626119079625
+
+# HELP coreclr_process_nonpaged_system_memory_size_bytes Pool Nonpaged Bytes
+# TYPE coreclr_process_nonpaged_system_memory_size_bytes gauge
+coreclr_process_nonpaged_system_memory_size_bytes 0 1626119079625
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 34694156288 1626119079625
+
+# HELP coreclr_process_thread_count The number of threads in the .NET process
+# TYPE coreclr_process_thread_count gauge
+coreclr_process_thread_count 67 1626119079625
+
+# HELP coreclr_process_user_processor_time_seconds The user processor time for this process
+# TYPE coreclr_process_user_processor_time_seconds gauge
+coreclr_process_user_processor_time_seconds 468.00775309999995 1626119079625
+
+# HELP process_resident_memory_bytes Resident memory size in bytes
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 79486976 1626119079625
+
+# HELP coreclr_process_virtual_size_bytes Virtual Bytes
+# TYPE coreclr_process_virtual_size_bytes gauge
+coreclr_process_virtual_size_bytes 34694156288 1626119079625
+
+# HELP coreclr_process_peak_working_set_bytes Working Set Peak
+# TYPE coreclr_process_peak_working_set_bytes gauge
+coreclr_process_peak_working_set_bytes 0 1626119079625
+
+# HELP coreclr_process_paged_system_memory_size_bytes Pool Paged Bytes
+# TYPE coreclr_process_paged_system_memory_size_bytes gauge
+coreclr_process_paged_system_memory_size_bytes 0 1626119079625
+
+# HELP coreclr_process_total_processor_time_seconds The total processor time for this process
+# TYPE coreclr_process_total_processor_time_seconds gauge
+coreclr_process_total_processor_time_seconds 667.5137624 1626119079625
+
+# HELP coreclr_process_peak_paged_memory_size_bytes Page File Bytes Peak
+# TYPE coreclr_process_peak_paged_memory_size_bytes gauge
+coreclr_process_peak_paged_memory_size_bytes 0 1626119079625
+
+# HELP process_open_fds Number of open file descriptors
+# TYPE process_open_fds gauge
+process_open_fds NaN 1626119079625
+
+# HELP coreclr_process_private_memory_size_bytes Private Bytes
+# TYPE coreclr_process_private_memory_size_bytes gauge
+coreclr_process_private_memory_size_bytes 0 1626119079625
+
+# HELP process_max_fds Number of open file descriptors
+# TYPE process_max_fds gauge
+process_max_fds NaN 1626119079625
+
+# HELP coreclr_working_set_bytes Working Set
+# TYPE coreclr_working_set_bytes gauge
+coreclr_working_set_bytes 79486976 1626119079625
+
+# HELP process_resident_heap_bytes Process heap size in bytes
+# TYPE process_resident_heap_bytes gauge
+process_resident_heap_bytes 0 1626119079625
+
+# HELP coreclr_process_paged_memory_size_bytes Page File Bytes
+# TYPE coreclr_process_paged_memory_size_bytes gauge
+coreclr_process_paged_memory_size_bytes 0 1626119079625
+
+# HELP coreclr_process_privileged_processor_time_seconds The privileged processor time for this process
+# TYPE coreclr_process_privileged_processor_time_seconds gauge
+coreclr_process_privileged_processor_time_seconds 199.50597390000001 1626119079625
+
